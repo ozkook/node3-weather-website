@@ -1,6 +1,3 @@
-console.log('Client side javascript file is loaded')
-
-
 // Im fetching data from the following URL and and then running the callback function - with response as it only argument(response holds the data from the URL and after that it parses the data from json to an object) 
 // json() is parsing the data from json to an object.
 
