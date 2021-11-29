@@ -1,0 +1,64 @@
+body {
+    color: 333333;
+    font-family: arial;
+    /* border: red solid; */
+    /* max-width: 650. it starts from the left side and stops after 650px(whish is approximately 2 thirds of the screen) */
+    max-width: 650px;
+    /* the first parameter is for top and bottom(which stays 0), and the second is an even margin for the left and right edges of the screen. */
+    margin: 0 auto;
+    padding: 0 16px;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    color: 888888;
+    border-top: 1px solid #eeeeee;
+    /* margin-top: 166px; */
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px; 
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 11px;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.portrait {
+    width: 200px;
+
+}
+
+.page-not-found {
+    font-size: 50px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background-color: #888888;
+    color: white;
+    padding: 8px;
+}

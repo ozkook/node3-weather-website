@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+        <title>Help</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body> 
+        <div class="main-content">
+        {{!-- here Im rendering a partial. the syntax is "greater then", and the name of the file, without the complete path and without the extantion --}}
+        <h1>{{>header}}</h1> 
+        <p>{{helpText}}</p>
+        </div>
+
+        {{>footer}}
+</body>
+
+</html>
