@@ -2,9 +2,15 @@
 const path = require('path')
 const express = require('express') // (NPM module)Express is not an object this time but a function.
 const hbs = require('hbs')
-const app = express()
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const { prototype } = require('events')
+
+//sets up the local server
+const app = express()
+// sets the server on heroku, or on the local
+const port = process.env.PORT || 30002
+
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -86,8 +92,7 @@ app.get('*', (req, res) => {
     }) 
 })
 
-//The listen function (in the express library) sets up the server. 
-//The first argument goes for the port. The second argument is a callback function.
-app.listen(30002, () => { 
-    console.log('server is up on port 30002')
+
+app.listen(port, () => { 
+    console.log(`server is up on port 30002${port}`)
 })
