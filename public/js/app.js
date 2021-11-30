@@ -17,6 +17,7 @@ weatherForm.addEventListener('submit', (event) => {
     messageOne.textContent = 'Loading'
     messageTwo.textContent = '' 
 
+// the fetch function takes the url route 'weather/'
     fetch(`http://localhost:30002/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
