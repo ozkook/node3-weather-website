@@ -6,10 +6,10 @@ const forecast = (longitude, latitude, callback) =>{
     request({ url, json: true }, (error, { body }={}) => {     
         if (error) { 
             callback('Unable to connect to weather service!', undefined)
+
         } else if (body.error) {
             callback('You have exceeded your monthly request limit', undefined)
-        } else if(body.error.type) {  
-            callback('search not found!', undefined)
+
         } else { 
             callback(undefined, `Its now ${body.current.temperature} temperature. The weather is ${body.current.weather_descriptions} and it feels like its ${body.current.feelslike} degrees out. The humidity is ${body.current.humidity}%.`)
         }
